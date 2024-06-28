@@ -3,10 +3,22 @@ spring:
     name: study-restful-api
   messages:
     basename: messages
+#  security:
+#    user:
+#      name: name
+#      password: password
+#  mvc:
+#    pathmatch:
+#      matching-strategy: ant_path_matcher
 server:
   port: 8088
-
 logging:
   level:
     js.study.study.restfulapi: debug
 #    org.springframework: debug
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+#        include: "self, beans"
