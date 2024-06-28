@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: study-restful-api
+server:
+  port: 8088
+
+logging:
+  level:
+    js.study.study.restfulapi: debug
+#    org.springframework: debug
