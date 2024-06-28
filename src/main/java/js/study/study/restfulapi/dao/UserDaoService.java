@@ -14,9 +14,9 @@ public class UserDaoService {
 
     private static int usersCount = 3;
     static {
-        users.add(new User(1, "Jaeseop", new Date()));
-        users.add(new User(2, "Eunju", new Date()));
-        users.add(new User(3, "Gamja", new Date()));
+        users.add(new User(1, "Jaeseop", new Date(), "password", "901209"));
+        users.add(new User(2, "Eunju", new Date(), "password", "901224"));
+        users.add(new User(3, "Gamja", new Date(), "password", "201203"));
     }
 
     public List<User> findAll() {
@@ -28,8 +28,8 @@ public class UserDaoService {
             user.setId(++usersCount);
         }
 
-        if (user.getJoinData() == null) {
-            user.setJoinData(new Date());
+        if (user.getJoinDate() == null) {
+            user.setJoinDate(new Date());
         }
 
         users.add(user);
